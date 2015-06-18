@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using FluentValidation.Attributes;
+using FluentValidationMVCSample.Validation;
 
 namespace FluentValidationMVCSample.Models
 {
+    [Validator(typeof(EmployeeValidator))]
     public class Employee
     {
         public int EmployeeId { get; set; }
